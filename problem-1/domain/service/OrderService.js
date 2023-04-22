@@ -1,6 +1,8 @@
 const Order = require('../Order.js');
 
 class OrderService {
+  static SHIPPING_COST_FACTOR = 0.1;
+
   checkout(cart) {
     const items = cart.getItems();
     const products = items.reduce((acc, item) => {
@@ -9,6 +11,10 @@ class OrderService {
     }, []);
     cart.markCheckout();
     return new Order(products);
+  }
+
+  totalCost(order) {
+    return order.totalCost(OrderService.SHIPPING_COST_FACTOR);
   }
 }
 

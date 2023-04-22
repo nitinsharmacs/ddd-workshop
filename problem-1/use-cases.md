@@ -41,3 +41,9 @@ Problem #9 Create Order( with Products) when Cart is checked out. Also Mark cart
 While Creating Order please do not use Item class but use Product class. Flatten out products in Item.
 
 Order order = new Order( List<Product> products)
+
+Code Problem 11:
+
+Calculate Total cost for the Order.
+Calculate shipping cost using weight of the Product.
+Total cost = cost of all products in order + (weightIngrams of each product \*0.1)
